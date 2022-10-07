@@ -6,6 +6,7 @@ public class No1 {
                         {5,3,1,2,4},
                         {2,1,5,4,4},
                         {3,3,4,3,3}};
+    public static double cartesian;
     public static void NoOne(){
         System.out.println("1)");
         System.out.println("영화별 평균 평가점수: ");
@@ -54,6 +55,7 @@ public class No1 {
             }
         }
         System.out.println();
+        System.out.println("Cartesian distance: "+cartesian);
     }
     public static int[] Cart(int n){
         int[] ans = {-1,-1,-1,-1,-1};
@@ -74,6 +76,7 @@ public class No1 {
                 min = cart;
             }
         }
+        cartesian = min;
         return ans;
     }
 
