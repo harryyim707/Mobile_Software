@@ -1,15 +1,24 @@
-import java.util.List;
-
 public class Sum<T extends Number> {
-    List<T> arr;
-    public Sum(List<T>arr){
-        this.arr=arr;
+    T[] arr;
+
+    public Sum(T[] arr) {
+        this.arr = arr;
     }
-    public <Number> double sum(){
-        double sum=0;
-        for(T i: arr){
-            sum += i.doubleValue();
+
+    public T sum() {
+        if (arr[0] instanceof Integer) {
+            Integer sum = 0;
+            for (int i=0; i<20;i++) {
+                sum += arr[i].intValue();
+            }
+            return (T) sum;
         }
-        return sum;
+        else{
+            Double sum = 0.0;
+            for (int i=0;i<20;i++) {
+                sum += arr[i].intValue();
+            }
+            return (T) sum;
+        }
     }
 }

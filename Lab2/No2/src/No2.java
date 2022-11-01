@@ -1,20 +1,13 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class No2 {
     public static void main(String[] args) throws Exception {
-        List<Integer> list1 = new  ArrayList<Integer>();
-        List<Double> list2 = new ArrayList<Double>();
-        for(int i=1;i<=20;i++){
-            list1.add(i);
-            list2.add((double)i);
-        }
+        Integer[] list1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+        Double[] list2 = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0};
         Avg<Integer> s1 = new Avg<Integer>(list1);
         Avg<Double> s2 = new Avg<Double>(list2);
         for(Integer i: list1){
             System.out.print(i+" ");
         }
-        System.out.println("; Sum: "+(int)s1.sum()+", Average: "+s1.avg());
+        System.out.println("; Sum: "+s1.sum()+", Average: "+s1.avg());
         for(Double j: list2){
             System.out.print(j+" ");
         }
